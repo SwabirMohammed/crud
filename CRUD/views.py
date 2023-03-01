@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import Student
 
+
 def index_page(request):
     return render(request, "index.html")
 
@@ -18,6 +19,7 @@ def signup_page(request):
 def edit_page(request):
     return render(request, "edit.html")
 
+
 def insertData(request):
     if request.method == "POST":
         name = request.POST.get('name')
@@ -26,4 +28,3 @@ def insertData(request):
         gender = request.POST.get('gender')
 
         query = Student(name=name, email=email, age=age, gender=gender)
-
