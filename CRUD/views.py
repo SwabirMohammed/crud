@@ -17,3 +17,10 @@ def signup_page(request):
 
 def edit_page(request):
     return render(request, "edit.html")
+
+def insertData(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        age = request.POST.get('age')
+        gender = request.POST.get('gender')
