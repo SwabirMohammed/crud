@@ -28,3 +28,4 @@ def insertData(request):
         gender = request.POST.get('gender')
 
         query = Student(name=name, email=email, age=age, gender=gender)
+        query.save()
