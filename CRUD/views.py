@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-
+from .models import Student
 
 def index_page(request):
     return render(request, "index.html")
@@ -24,3 +24,6 @@ def insertData(request):
         email = request.POST.get('email')
         age = request.POST.get('age')
         gender = request.POST.get('gender')
+
+        query = Student(name=name, email=email, age=age, gender=gender)
+
