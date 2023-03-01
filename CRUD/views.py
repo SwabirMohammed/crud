@@ -29,3 +29,5 @@ def insertData(request):
 
         query = Student(name=name, email=email, age=age, gender=gender)
         query.save()
+
+        return render(request, "index.html")
