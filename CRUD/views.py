@@ -51,8 +51,8 @@ def updateData(request, id):
         email = request.POST.get('email')
         age = request.POST.get('age')
         gender = request.POST.get('gender')
-        country = request.POST.get('country')
-        city = request.POST.get('city')
+        country = request.POST.get('Country')
+        city = request.POST.get('City')
 
         update_info = Student.objects.get(id=id)
         update_info.name = name
