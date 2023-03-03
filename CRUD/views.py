@@ -61,8 +61,8 @@ def updateData(request, id):
         update_info.gender = gender
         update_info.country = country
         update_info.city = city
-
         update_info.save()
+
         return redirect("/")
 
     d = Student.objects.get(id=id)
