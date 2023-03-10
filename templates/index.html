@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control  mt-2" placeholder="Amount" name="Amount" required>
+                        <input type="number" class="form-control  mt-2" placeholder="Amount" name="Amount" required>
 
                     </div>
 
@@ -101,6 +101,7 @@
                         <td style="color: white">{{d.country}}</td>
                         <td style="color: white">{{d.city}}</td>
                         <td style="...">{{d.amount}}</td>
+                        <td><a href="/pay/{{d.id}}" type="button" class="btn btn-outline-warning">Pay</a></td>
                         <td><a href="/update/{{d.id}}" type="button" class="btn btn-outline-warning">Edit</a></td>
                         <td><a href="/delete/{{d.id}}" type="button" class="btn btn-outline-danger">Delete</a></td>
                       </tr>

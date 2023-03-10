@@ -68,3 +68,6 @@ def updateData(request, id):
     d = Student.objects.get(id=id)
     context = {"d": d}
     return render(request, "edit.html", context)
+
+
+
